@@ -1,6 +1,9 @@
 <?php
-namespace App\Http\Controller\Admin;
+namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
+use App\Org\code\Code;
+use Gregwar\Captcha\CaptchaBuilder;
+use Gregwar\Captcha\PhraseBuilder;
 
 /**
  * Created by PhpStorm.
@@ -12,5 +15,10 @@ class LoginController extends Controller
 {
     public function login() {
         return view('admin.login');
+    }
+
+    public function code(){
+        $code = new Code();
+        return $code->make();
     }
 }
