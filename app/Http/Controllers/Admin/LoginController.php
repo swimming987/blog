@@ -14,6 +14,7 @@ use Gregwar\Captcha\PhraseBuilder;
 class LoginController extends Controller
 {
     public function login() {
+        
         return view('admin.login');
     }
 
