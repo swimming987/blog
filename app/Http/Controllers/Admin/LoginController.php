@@ -23,3 +23,4 @@ class LoginController extends Controller
         return $code->make();
     }
 }
+
