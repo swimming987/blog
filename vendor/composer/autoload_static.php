@@ -89,6 +89,7 @@ class ComposerStaticInit05792dc4d119a7a2b2a48ace77cdd43e
         ),
         'J' => 
         array (
+            'JohnLui\\AliyunOSS\\' => 18,
             'JakubOnderka\\PhpConsoleHighlighter\\' => 35,
             'JakubOnderka\\PhpConsoleColor\\' => 29,
         ),
@@ -279,6 +280,10 @@ class ComposerStaticInit05792dc4d119a7a2b2a48ace77cdd43e
         'Laravel\\Tinker\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel/tinker/src',
+        ),
+        'JohnLui\\AliyunOSS\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/johnlui/aliyun-oss',
         ),
         'JakubOnderka\\PhpConsoleHighlighter\\' => 
         array (
@@ -1987,6 +1992,7 @@ class ComposerStaticInit05792dc4d119a7a2b2a48ace77cdd43e
         'JakubOnderka\\PhpConsoleColor\\ConsoleColor' => __DIR__ . '/..' . '/jakub-onderka/php-console-color/src/ConsoleColor.php',
         'JakubOnderka\\PhpConsoleColor\\InvalidStyleException' => __DIR__ . '/..' . '/jakub-onderka/php-console-color/src/InvalidStyleException.php',
         'JakubOnderka\\PhpConsoleHighlighter\\Highlighter' => __DIR__ . '/..' . '/jakub-onderka/php-console-highlighter/src/Highlighter.php',
+        'JohnLui\\AliyunOSS\\AliyunOSS' => __DIR__ . '/..' . '/johnlui/aliyun-oss/AliyunOSS.php',
         'JsonSerializable' => __DIR__ . '/..' . '/nesbot/carbon/src/JsonSerializable.php',
         'Laravel\\Tinker\\ClassAliasAutoloader' => __DIR__ . '/..' . '/laravel/tinker/src/ClassAliasAutoloader.php',
         'Laravel\\Tinker\\Console\\TinkerCommand' => __DIR__ . '/..' . '/laravel/tinker/src/Console/TinkerCommand.php',

@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Model\Cate;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Intervention\Image\ImageManagerStatic as Image;
+
 
 class ArticleController extends Controller
 {
@@ -30,8 +32,7 @@ class ArticleController extends Controller
         if(! $file->move($path,$newfile)){
             return response()->json(['ServerNo'=>'400','ResultData'=>'保存文件失败']);
         }
-        return ['ServerNo'=>'200','ResultData'=>$newfile];
-        //return response()->json(['ServerNo'=>'200','ResultData'=>$newfile]);
+        return response()->json(['ServerNo'=>'200','ResultData'=>$newfile]);
 
         //2. 将文件上传到OSS的指定仓库
 //        $osskey : 文件上传到oss仓库后的新文件名
@@ -44,15 +45,14 @@ class ArticleController extends Controller
 
 //        $res = \Storage::disk('qiniu')->writeStream($newfile, fopen($file->getRealPath(), 'r'));
 
-
 //        $res = Image::make($file)->resize(100,100)->save($path.'/'.$newfile);
-//
-//        if($res){
-//            // 如果上传成功
-//            return response()->json(['ServerNo'=>'200','ResultData'=>$newfile]);
-//        }else{
-//            return response()->json(['ServerNo'=>'400','ResultData'=>'上传文件失败']);
-//        }
+
+        if($res){
+            // 如果上传成功
+            return response()->json(['ServerNo'=>'200','ResultData'=>$newfile]);
+        }else{
+            return response()->json(['ServerNo'=>'400','ResultData'=>'上传文件失败']);
+        }
 
 
 
