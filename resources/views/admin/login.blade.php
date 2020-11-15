@@ -34,19 +34,19 @@
         @endif
         <div id="darkbannerwrap"></div>
         
-        <form method="post" class="layui-form" action="{{ url('admin/dologin') }}">
+        <form method="post" class="layui-form" action="{{ url('admin/doLogin') }}">
             {{ csrf_field() }}
             <input name="username" placeholder="用户名"  type="text" lay-verify="required" class="layui-input" >
             <hr class="hr15">
             <input name="password" lay-verify="required" placeholder="密码"  type="password" class="layui-input">
             <hr class="hr15">
             <input name="code" style="height:40px;width:150px;float:left;" lay-verify="required" placeholder="验证码"  type="text" class="layui-input">
-            <img src="{{ url('admin/code') }}" alt="" style="float:right" onclick="this.src='{{ url('admin/code') }}?'+Math.random()">
+{{--            <img src="{{ url('admin/code') }}" alt="" style="float:right" onclick="this.src='{{ url('admin/code') }}?'+Math.random()">--}}
 
 
-            {{--<a onclick="javascript:re_captcha();">--}}
-                {{--<img src="{{ URL('/code/captcha/1') }}" id="127ddf0de5a04167a9e427d883690ff6">--}}
-            {{--</a>--}}
+            <a onclick="javascript:re_captcha();">
+                <img src="{{ url('/code/captcha/1') }}" id="127ddf0de5a04167a9e427d883690ff6">
+            </a>
 
             <hr class="hr15">
             <input value="登录" lay-submit lay-filter="login" style="width:100%;" type="submit">
@@ -76,11 +76,11 @@
 
     </script>
     <script type="text/javascript">
-        {{--function re_captcha() {--}}
-            {{--$url = "{{ URL('/code/captcha') }}";--}}
-            {{--$url = $url + "/" + Math.random();--}}
-            {{--document.getElementById('127ddf0de5a04167a9e427d883690ff6').src = $url;--}}
-        {{--}--}}
+        function re_captcha() {
+            $url = "{{ url('/code/captcha') }}";
+            $url = $url + "/" + Math.random();
+            document.getElementById('127ddf0de5a04167a9e427d883690ff6').src = $url;
+        }
     </script>
 
 

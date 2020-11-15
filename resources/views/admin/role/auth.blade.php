@@ -20,7 +20,7 @@
   
   <body>
     <div class="x-body">
-        <form class="layui-form" action="{{ url('admin/role/doauth') }}" method="post">
+        <form class="layui-form" action="{{ url('admin/role/doAuth') }}" method="post">
             {{ csrf_field() }}
           <div class="layui-form-item">
               <label for="L_email" class="layui-form-label">
